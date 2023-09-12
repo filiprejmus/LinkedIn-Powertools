@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+  }
+  
+  #text-container {
+    max-height: 400px;
+    width: 600px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }

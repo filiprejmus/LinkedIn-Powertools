@@ -1,0 +1,24 @@
+{
+  "name": "cloudsquid powertools",
+  "manifest_version": 3,
+  "version": "1.0",
+  "description": "A Chrome extension that summarizes web pages using OpenSource Models",
+  "permissions": [
+    "activeTab",
+    "storage"  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": "cloudsquid.png",
+    "default_popup": "popup.html",
+    "default_title": "Summarize with OpenAI"
+  }
+}
