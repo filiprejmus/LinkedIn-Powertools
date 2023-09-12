@@ -4,6 +4,11 @@
   "version": "1.0",
   "description": "A Chrome extension that streamlines LinkedIn workflows",
   "permissions": ["activeTab", "storage"],
+  "icons": {
+    "16": "assets/cloudsquid_icon_new_16.png",
+    "48": "assets/cloudsquid_icon_new_48.png",
+    "128": "assets/cloudsquid_icon_new_128.png"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -11,7 +16,7 @@
     }
   ],
   "action": {
-    "default_icon": "cloudsquid.png",
+    "default_icon": "assets/cloudsquid_icon_new_48.png",
     "default_popup": "popup.html",
     "default_title": "LinkedIn power tools by cloudsquid"
   }

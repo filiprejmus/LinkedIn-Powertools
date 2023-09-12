@@ -1,5 +1,10 @@
 // Function to inject the floating button
 function injectFloatingButton() {
+  const fontLink = document.createElement("link");
+  fontLink.href =
+    "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap";
+  fontLink.rel = "stylesheet";
+  document.head.appendChild(fontLink);
   const button = document.createElement("button");
   button.id = "cloudsquid-button";
   button.style.position = "fixed";
@@ -13,6 +18,7 @@ function injectFloatingButton() {
   button.style.border = "none";
   button.style.zIndex = "999999";
   button.innerText = "Fill";
+  button.style.fontFamily = "Montserrat, sans-serif";
 
   button.onclick = function () {
     const element = document.querySelector(
