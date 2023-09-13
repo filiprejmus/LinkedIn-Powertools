@@ -24,18 +24,12 @@ function injectFloatingButton() {
   // Other options can be added similarly to fillOption
 
   button.onclick = function () {
-    if (optionsList.style.display === "none") {
-      optionsList.style.display = "block";
-      button.style.borderRadius = "5%"; // Make it square
-      button.style.width = "50px"; // Adjust width as required
-      button.style.height = "auto";
-      button.style.marginBottom = "10px"; // Add a margin to separate the button from the list
-    } else {
+    if (button.classList.contains("open")) {
+      button.classList.remove("open");
       optionsList.style.display = "none";
-      button.style.borderRadius = "50%"; // Back to circle
-      button.style.width = "50px";
-      button.style.height = "50px";
-      button.style.marginBottom = "0"; // Reset the margin
+    } else {
+      button.classList.add("open");
+      optionsList.style.display = "block";
     }
   };
 
